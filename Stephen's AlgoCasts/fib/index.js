@@ -35,7 +35,7 @@ function memo(fn) {
         if (cache[args]) {
             return cache[args];
         }
-        const result = fn.apply(this, args);
+        const result = fn(...args);
         cache[args] = result;
         return result;
     }
