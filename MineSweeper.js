@@ -11,9 +11,9 @@ function mineSweeper(bombs, numRows, numCols) {
         let row = bomb[0]
         let col = bomb[1]
         mineSweeperArr[row][col] = -1;
-        console.log('row,col', row,col)
-        for (let i = row - 1; i < row + 1 ; i++) {
-            for (let j = col - 1; j < col + 1; j++) {
+        console.log('row,col', row, col)
+        for (let i = row - 1; i < row + 2; i++) {
+            for (let j = col - 1; j < col + 2; j++) {
                 if (i >= 0 && i < numRows && j >= 0 && j < numCols && mineSweeperArr[i][j] !== -1) {
                     mineSweeperArr[i][j]++;
                 }
